@@ -37,7 +37,7 @@
           <item row="0" column="5">
            <widget class="QLineEdit" name="lineEditLike_fahui_name">
             <property name="placeholderText">
-             <string>法会名称：</string>
+             <string>  法会名称：</string>
             </property>
            </widget>
           </item>
@@ -114,7 +114,7 @@
           <item row="1" column="5">
            <widget class="QLineEdit" name="lineEditLike_mod_time">
             <property name="placeholderText">
-             <string>日期如: 2014-11-11</string>
+             <string>  日期如: 2014-11-11</string>
             </property>
            </widget>
           </item>

@@ -26,7 +26,10 @@
 #include <QCryptographicHash>
 #include <QLabel>
 #include <QGridLayout>
-
+#include <QFile>
+#include <QPainter>
+#include <QFont>
+#include <QPdfWriter>
 
 
 namespace Ui {
@@ -46,7 +49,7 @@ public:
     QSqlTableModel *queryModel;
     bool connDatabase(QString hostname, QString username, QString password, QString dbname);
     void setTable(QString tableName, QSqlTableModel *&queryModel, QTableView *&tableView, QSqlTableModel::EditStrategy editStrategy);
-
+    void clearSearchEdits();
     QByteArray getImageFromDb(QString code);
     void searchData();
     void showImage(QString code);
@@ -62,8 +65,12 @@ private slots:
 
     void on_tableView_clicked(const QModelIndex &index);
 
+    void on_printImagetoPng_clicked();
+    void on_printInfotoPdf_clicked();
+
 private:
     Ui::MainWindow *ui;
+    QString gCode; // For global variable
 };
 
 #endif // MAINWINDOW_H
