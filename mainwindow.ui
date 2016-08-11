@@ -51,7 +51,7 @@
           <item row="0" column="3">
            <widget class="QLineEdit" name="lineEdit_personnel_id">
             <property name="placeholderText">
-             <string> 身份证号码：</string>
+             <string>  身份证号码：</string>
             </property>
            </widget>
           </item>
@@ -65,7 +65,7 @@
           <item row="0" column="0">
            <widget class="QLineEdit" name="lineEdit_name">
             <property name="placeholderText">
-             <string> 姓名：</string>
+             <string>  姓名：</string>
             </property>
            </widget>
           </item>
@@ -86,7 +86,7 @@
           <item row="1" column="2">
            <widget class="QLineEdit" name="lineEdit_district">
             <property name="placeholderText">
-             <string> 区县:</string>
+             <string>  区县:</string>
             </property>
            </widget>
           </item>

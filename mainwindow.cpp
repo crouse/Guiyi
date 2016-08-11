@@ -137,6 +137,8 @@ void MainWindow::on_actionCon_triggered()
     QString dbname = "guiyi";
     connDatabase(hostname, username, password, dbname);
     lineEditHostIp->setDisabled(true);
+    lineEditUserName->setDisabled(true);
+    lineEditPassWord->setDisabled(true);
 }
 
 void MainWindow::on_actionQuery_triggered()
@@ -205,9 +207,9 @@ void MainWindow::on_printInfotoPdf_clicked()
     pdfPainter->setFont(font);
 
     if (query.next()) {
-        QString fahuiName = query.value(2).toString();
         QString dateTime = query.value(3).toDateTime().toString("yyyy-MM-dd");
-        pdfPainter->drawText(QRect(3000, 0, 6000, 300), QString("*** %1 %2 档案资料 【绝密，如有泄露因果自负】***").arg(fahuiName).arg(dateTime));
+        pdfPainter->drawText(QRect(1000, 0, 6000, 300), QString("* %1 档案资料 【秘密，如有泄露因果自负】拾到可就地销毁 *").arg(dateTime));
+        pdfPainter->drawText(QRect(2500, 13000, 6000, 300), QString("由使用者: %1 导出").arg(lineEditUserName->text().trimmed()));
 
         QFont font;
         font.setFamily("宋体");
@@ -218,10 +220,9 @@ void MainWindow::on_printInfotoPdf_clicked()
         QByteArray bytes = getImageFromDb(gCode);
         photo.loadFromData(bytes);
         pdfPainter->drawPixmap(1200, 800, 885, 1239, photo);
-        pdfPainter->setPen(QPen(Qt::gray, 10));
+        pdfPainter->setPen(QPen(Qt::gray, 40));
         pdfPainter->drawLine(QPoint(2200, 300), QPoint(2200, 15000));
         pdfPainter->drawLine(QPoint(2200, 300), QPoint(10000, 300));
-
 
         QString name = query.value(0).toString();
         QString gender = query.value(1).toString();
@@ -276,6 +277,15 @@ void MainWindow::on_printInfotoPdf_clicked()
         pdfPainter->drawText(QRect(2500, 10200, 4000, 300), QString("学佛始年: %1").arg(startYear));
         pdfPainter->drawText(QRect(2500, 10500, 4000, 300), QString("学佛深度: %1").arg(deepH));
         pdfPainter->drawText(QRect(2500, 10800, 4000, 300), QString("个人格言: %1").arg(maxim));
+        pdfPainter->drawText(QRect(2500, 11100, 4000, 300), QString("皈依证号: %1").arg(gCode));
+
+        pdfPainter->rotate(45);
+        pdfPainter->setPen(QPen(Qt::red, 30));
+        font.setFamily("黑体");
+        font.setPointSize(30);
+        pdfPainter->setFont(font);
+
+        pdfPainter->drawText(this->width() + 2000, this->height() - 1200, "★ 秘密信息 ★ 如有泄露 因果自负！");
 
     }
 
