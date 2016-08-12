@@ -33,6 +33,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->stackedWidget->setCurrentIndex(0);
     ui->lineEdit_name->setFocus();
+
+
+    // Init global vars
+    gDesktopPath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
 }
 
 MainWindow::~MainWindow()
@@ -173,7 +177,7 @@ void MainWindow::on_printImagetoPng_clicked()
 
     query.exec();
     while (query.next()) {
-        QString filename = QFileDialog::getSaveFileName(this, tr("保存照片"), gCode, tr("*.png"));
+        QString filename = QFileDialog::getSaveFileName(this, tr("保存照片"), gDesktopPath + QDir::separator() + gCode, tr("*.png"));
         QPixmap photo;
         photo.loadFromData(query.value(0).toByteArray(), "PNG");
         photo.save(filename);
@@ -184,8 +188,7 @@ void MainWindow::on_printImagetoPng_clicked()
 
 void MainWindow::on_printInfotoPdf_clicked()
 {
-    QString desktopPath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
-    QString filename = QFileDialog::getSaveFileName(this, tr("保存个人档案"), desktopPath + QDir::separator() + gCode, tr("*.pdf"));
+    QString filename = QFileDialog::getSaveFileName(this, tr("保存个人档案"), gDesktopPath + QDir::separator() + gCode, tr("*.pdf"));
     QSqlQuery query;
     query.prepare("select name, gender, fahui_name, mod_time, birthday, race, province, city, district, degree, "
                   " graduate_time, graduate_school, hobby, job, year2start_learning_buddhism, "

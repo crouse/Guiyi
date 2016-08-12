@@ -73,6 +73,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QString gCode; // For global variable
+    QString gDesktopPath;
 };
 
 #endif // MAINWINDOW_H
