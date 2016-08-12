@@ -184,7 +184,8 @@ void MainWindow::on_printImagetoPng_clicked()
 
 void MainWindow::on_printInfotoPdf_clicked()
 {
-    QString filename = QFileDialog::getSaveFileName(this, tr("保存个人档案"), gCode, tr("*.pdf"));
+    QString desktopPath = QStandardPaths::writableLocation(QStandardPaths::DesktopLocation);
+    QString filename = QFileDialog::getSaveFileName(this, tr("保存个人档案"), desktopPath + QDir::separator() + gCode, tr("*.pdf"));
     QSqlQuery query;
     query.prepare("select name, gender, fahui_name, mod_time, birthday, race, province, city, district, degree, "
                   " graduate_time, graduate_school, hobby, job, year2start_learning_buddhism, "
@@ -208,8 +209,8 @@ void MainWindow::on_printInfotoPdf_clicked()
 
     if (query.next()) {
         QString dateTime = query.value(3).toDateTime().toString("yyyy-MM-dd");
-        pdfPainter->drawText(QRect(1000, 0, 6000, 300), QString("* %1 档案资料 【秘密，如有泄露因果自负】拾到可就地销毁 *").arg(dateTime));
-        pdfPainter->drawText(QRect(2500, 13000, 6000, 300), QString("由使用者: %1 导出").arg(lineEditUserName->text().trimmed()));
+        pdfPainter->drawText(QRect(1000, 0, 6000, 300), QString("* %1 档案资料勿要乱放乱传阅，没有必要请不要打印、传播 *").arg(dateTime));
+        pdfPainter->drawText(QRect(2500, 13000, 6000, 300), QString("由使用者 %1 于 %2 导出").arg(lineEditUserName->text().trimmed()).arg(QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss")));
 
         QFont font;
         font.setFamily("宋体");

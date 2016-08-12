@@ -30,6 +30,8 @@
 #include <QPainter>
 #include <QFont>
 #include <QPdfWriter>
+#include <QDateTime>
+#include <QStandardPaths>
 
 
 namespace Ui {
