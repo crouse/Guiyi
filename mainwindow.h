@@ -70,6 +70,8 @@ private slots:
     void on_printImagetoPng_clicked();
     void on_printInfotoPdf_clicked();
 
+    void on_pushButtonAdd_clicked();
+
 private:
     Ui::MainWindow *ui;
     QString gCode; // For global variable

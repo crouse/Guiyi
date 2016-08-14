@@ -27,129 +27,213 @@
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
          <layout class="QGridLayout" name="gridLayout">
-          <item row="0" column="2">
-           <widget class="QLineEdit" name="lineEdit_phone_num">
-            <property name="placeholderText">
-             <string>  手机号码：</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="5">
-           <widget class="QLineEdit" name="lineEditLike_fahui_name">
-            <property name="placeholderText">
-             <string>  法会名称：</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLineEdit" name="lineEditLike_province">
-            <property name="placeholderText">
-             <string>  省：</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="3">
-           <widget class="QLineEdit" name="lineEdit_personnel_id">
-            <property name="placeholderText">
-             <string>  身份证号码：</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="4">
-           <widget class="QLineEdit" name="lineEdit_code">
-            <property name="placeholderText">
-             <string>  皈依证号码：</string>
-            </property>
-           </widget>
-          </item>
           <item row="0" column="0">
-           <widget class="QLineEdit" name="lineEdit_name">
-            <property name="placeholderText">
-             <string>  姓名：</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QLineEdit" name="lineEdit_gender">
-            <property name="placeholderText">
-             <string>  性别：</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QLineEdit" name="lineEditLike_city">
-            <property name="placeholderText">
-             <string>  市:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="2">
-           <widget class="QLineEdit" name="lineEdit_district">
-            <property name="placeholderText">
-             <string>  区县:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="3">
-           <widget class="QLineEdit" name="lineEditLike_address">
-            <property name="placeholderText">
-             <string>  镇/村/街道地址：</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="4">
-           <widget class="QLineEdit" name="lineEditLike_hobby">
-            <property name="placeholderText">
-             <string>  爱好：</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="5">
-           <widget class="QPushButton" name="pushButton">
-            <property name="text">
-             <string>查询</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="5">
-           <widget class="QLineEdit" name="lineEditLike_mod_time">
-            <property name="placeholderText">
-             <string>  日期如: 2014-11-11</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLineEdit" name="lineEditLike_graduate_school">
-            <property name="placeholderText">
-             <string>  毕业学校：</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QLineEdit" name="lineEditLike_degree">
-            <property name="placeholderText">
-             <string>  学位:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="2">
-           <widget class="QLineEdit" name="lineEditLike_race">
-            <property name="placeholderText">
-             <string>  民族:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="3">
            <widget class="QLineEdit" name="lineEdit_receipt">
             <property name="placeholderText">
              <string>  收据号:</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="4">
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEdit_code">
+            <property name="placeholderText">
+             <string>  皈依证号码：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QLineEdit" name="lineEdit_name">
+            <property name="placeholderText">
+             <string>  姓名：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="QLineEdit" name="lineEdit_fname">
+            <property name="placeholderText">
+             <string>  法名：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="4">
+           <widget class="QLineEdit" name="lineEditLike_race">
+            <property name="placeholderText">
+             <string>  民族:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="5">
+           <widget class="QLineEdit" name="lineEdit_gender">
+            <property name="placeholderText">
+             <string>  性别：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLineEdit" name="lineEdit_birthday">
+            <property name="placeholderText">
+             <string>  出生年月日：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEditLike_degree">
+            <property name="placeholderText">
+             <string>  学位:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
            <widget class="QLineEdit" name="lineEditLike_job">
             <property name="placeholderText">
              <string>  工作:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3">
+           <widget class="QLineEdit" name="lineEdit_personnel_id">
+            <property name="placeholderText">
+             <string>  身份证号码：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4">
+           <widget class="QLineEdit" name="lineEditLike_health">
+            <property name="placeholderText">
+             <string>  健康情况：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="5">
+           <widget class="QLineEdit" name="lineEditLike_hobby">
+            <property name="placeholderText">
+             <string>  爱好：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLineEdit" name="lineEdit_phone_num">
+            <property name="placeholderText">
+             <string>  手机号码：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="lineEdit_workplace">
+            <property name="placeholderText">
+             <string>  工作单位：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QLineEdit" name="lineEditLike_province">
+            <property name="placeholderText">
+             <string>  省：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="3">
+           <widget class="QLineEdit" name="lineEditLike_city">
+            <property name="placeholderText">
+             <string>  市:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="4">
+           <widget class="QLineEdit" name="lineEdit_district">
+            <property name="placeholderText">
+             <string>  区县:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="5">
+           <widget class="QLineEdit" name="lineEditLike_address">
+            <property name="placeholderText">
+             <string>  镇/村/街道地址：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="lineEditLike_graduate_school">
+            <property name="placeholderText">
+             <string>  毕业学校：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLineEdit" name="lineEdit_graduate_time">
+            <property name="placeholderText">
+             <string>  毕业时间：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="2">
+           <widget class="QLineEdit" name="lineEdit_year2start_learning_buddhism">
+            <property name="placeholderText">
+             <string>  学佛开始年份:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="3">
+           <widget class="QLineEdit" name="lineEdit_reason2learning_dharma">
+            <property name="placeholderText">
+             <string>  学佛因缘：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="4">
+           <widget class="QPushButton" name="pushButtonAdd">
+            <property name="text">
+             <string>新增</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="5">
+           <widget class="QPushButton" name="pushButton">
+            <property name="text">
+             <string>查询</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="5">
+           <widget class="QLineEdit" name="lineEditLike_fahui_name">
+            <property name="placeholderText">
+             <string>  法会名称：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="4">
+           <widget class="QLineEdit" name="lineEditLike_mod_time">
+            <property name="placeholderText">
+             <string>  日期如: 2014-11-11</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLineEdit" name="lineEditLike_nums_of_buddhism_book">
+            <property name="placeholderText">
+             <string>  读经典部数，数字:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QLineEdit" name="lineEditLike_easy2learn_buddhism_book">
+            <property name="placeholderText">
+             <string>  认为易学经典：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="2">
+           <widget class="QLineEdit" name="lineEditLike_hard2read">
+            <property name="placeholderText">
+             <string>  认为难学经典：</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="3">
+           <widget class="QLineEdit" name="lineEditLike_maxim">
+            <property name="placeholderText">
+             <string>  感悟：</string>
             </property>
            </widget>
           </item>
@@ -164,7 +248,7 @@
            <enum>Qt::CustomContextMenu</enum>
           </property>
           <property name="editTriggers">
-           <set>QAbstractItemView::NoEditTriggers</set>
+           <set>QAbstractItemView::SelectedClicked</set>
           </property>
           <property name="alternatingRowColors">
            <bool>true</bool>
@@ -214,6 +298,39 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>lineEdit_receipt</tabstop>
+  <tabstop>lineEdit_code</tabstop>
+  <tabstop>lineEdit_name</tabstop>
+  <tabstop>lineEdit_fname</tabstop>
+  <tabstop>lineEditLike_race</tabstop>
+  <tabstop>lineEdit_gender</tabstop>
+  <tabstop>lineEdit_birthday</tabstop>
+  <tabstop>lineEditLike_degree</tabstop>
+  <tabstop>lineEditLike_job</tabstop>
+  <tabstop>lineEdit_personnel_id</tabstop>
+  <tabstop>lineEditLike_health</tabstop>
+  <tabstop>lineEditLike_hobby</tabstop>
+  <tabstop>lineEdit_phone_num</tabstop>
+  <tabstop>lineEdit_workplace</tabstop>
+  <tabstop>lineEditLike_province</tabstop>
+  <tabstop>lineEditLike_city</tabstop>
+  <tabstop>lineEdit_district</tabstop>
+  <tabstop>lineEditLike_address</tabstop>
+  <tabstop>lineEdit_graduate_time</tabstop>
+  <tabstop>lineEditLike_graduate_school</tabstop>
+  <tabstop>lineEdit_year2start_learning_buddhism</tabstop>
+  <tabstop>lineEdit_reason2learning_dharma</tabstop>
+  <tabstop>lineEditLike_mod_time</tabstop>
+  <tabstop>lineEditLike_fahui_name</tabstop>
+  <tabstop>lineEditLike_nums_of_buddhism_book</tabstop>
+  <tabstop>lineEditLike_easy2learn_buddhism_book</tabstop>
+  <tabstop>lineEditLike_hard2read</tabstop>
+  <tabstop>lineEditLike_maxim</tabstop>
+  <tabstop>pushButtonAdd</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>tableView</tabstop>
+ </tabstops>
  <resources>
   <include location="files.qrc"/>
  </resources>

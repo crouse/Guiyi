@@ -32,7 +32,7 @@ MainWindow::MainWindow(QWidget *parent) :
     }
 
     ui->stackedWidget->setCurrentIndex(0);
-    ui->lineEdit_name->setFocus();
+    ui->lineEdit_receipt->setFocus();
 
 
     // Init global vars
@@ -346,4 +346,41 @@ void MainWindow::on_tableView_clicked(const QModelIndex &index)
         qDebug() << tmp;
         showImage(tmp);
     }
+}
+
+void MainWindow::on_pushButtonAdd_clicked()
+{
+    QObjectList list = ui->page->children();
+    qDebug() << list.length();
+    QString insertSql;
+    QStringList keyList;
+    QStringList valueList;
+    QLineEdit *lineEditTmp;
+    foreach(QObject *obj, list) {
+        lineEditTmp = qobject_cast<QLineEdit*>(obj);
+        if (lineEditTmp) {
+            QString objName = lineEditTmp->objectName();
+            QString objValue = lineEditTmp->text().trimmed();
+            if (objValue.isEmpty()) continue;
+            QString name, value;
+            if (objName.startsWith("lineEditLike_")) {
+                name = objName.mid(13);
+            } else if (objName.startsWith("lineEdit_")) {
+                name = objName.mid(9);
+            }
+
+            value = objValue;
+            qDebug() << name << value;
+            keyList.append(name);
+            valueList.append("'" + value + "'");
+        }
+    }
+
+    insertSql = QString("insert into tb_guiyi (%1) values (%2)").arg(keyList.join(",")).arg(valueList.join(","));
+
+    QSqlQuery query;
+    query.exec(insertSql);
+
+    qDebug() << insertSql << query.lastError().text();
+    clearSearchEdits();
 }
